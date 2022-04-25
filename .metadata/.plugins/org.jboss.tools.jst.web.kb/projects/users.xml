@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths/>
+ <validation>
+  <el>
+   <linked-el length="17" name="%0" offset="964" path="%1"/>
+   <linked-el length="23" name="%2" offset="823" path="%1"/>
+   <linked-el length="26" name="%3" offset="1865" path="%4"/>
+   <linked-el length="26" name="%5" offset="1865" path="%4"/>
+   <linked-el length="19" name="%5" offset="450" path="%1"/>
+   <linked-el length="22" name="%5" offset="2688" path="%4"/>
+   <linked-el length="16" name="%6" offset="683" path="%1"/>
+   <linked-el length="25" name="%7" offset="2237" path="%4"/>
+   <linked-el length="17" name="%8" offset="2012" path="%4"/>
+   <linked-el length="17" name="%9" offset="964" path="%1"/>
+   <linked-el length="17" name="%9" offset="2012" path="%4"/>
+   <linked-el length="25" name="%9" offset="2237" path="%4"/>
+   <linked-el length="16" name="%9" offset="683" path="%1"/>
+   <linked-el length="23" name="%9" offset="823" path="%1"/>
+   <linked-el length="16" name="%9" offset="2419" path="%4"/>
+   <linked-el length="14" name="%9" offset="552" path="%1"/>
+   <linked-el length="16" name="%10" offset="2419" path="%4"/>
+   <linked-el length="26" name="%11" offset="1865" path="%4"/>
+   <linked-el length="19" name="%12" offset="450" path="%1"/>
+   <linked-el length="14" name="%13" offset="552" path="%1"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="setup.price" value="%0"/>
+  <alias path="setup.name" value="%6"/>
+  <alias path="setup.description" value="%2"/>
+  <alias path="setupBean.setup.nome" value="%3"/>
+  <alias path="setupBean" value="%5"/>
+  <alias path="setup.dataNascimento" value="%7"/>
+  <alias path="setup.email" value="%8"/>
+  <alias path="/users/src/main/webapp/cadastro.xhtml" value="%4"/>
+  <alias path="setup" value="%9"/>
+  <alias path="setup.senha" value="%10"/>
+  <alias path="setupBean.setup" value="%11"/>
+  <alias path="/users/src/main/webapp/usuarios.xhtml" value="%1"/>
+  <alias path="setupBean.list" value="%12"/>
+  <alias path="setup.id" value="%13"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
+</kb-project>

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+	<title>Cadastro</title>
+</h:head>
+
+<h:body>
+
+	<script type="text/javascript">
+    PrimeFaces.locales['br'] = {
+        closeText: 'Fechar',
+        prevText: 'Anterior',
+        nextText: 'Próximo',
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julhio', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+        dayNamesShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
+        weekHeader: 'Semana',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: '',
+        timeOnlyTitle: 'Somente hora',
+        timeText: 'Tempo',
+        hourText: 'Hora',
+        minuteText: 'Minuto',
+        secondText: 'Segundo',
+        millisecondText: 'Milisegundo',
+        currentText: 'Data Atual',
+        ampm: false,
+        month: 'Mês',
+        week: 'Semana',
+        day: 'Daa',
+        allDayText: 'Todo o Dia',
+        today: 'Hoje',
+        clear: 'Limpar'
+    };
+</script>
+
+	<h:form>
+		<p:card style="width: 25em; margin: 1em auto">
+			<f:facet name="title">Novo Cadastro</f:facet>
+
+			<p:dataTable var="setup" value="#{setupBean.list}">
+				<div class="ui-fluid">
+					<div class="p-field">
+						<label for="name">Name</label>
+						<p:inputText id="name" type="text" value="#{setup.nome}" />
+					</div>
+					<div class="p-field">
+						<label for="email">Email</label>
+						<p:inputText id="email" value="#{setup.email}" />
+					</div>
+					<div class="p-field">
+						<label for="dataNascimento">Data de Nascimento</label>
+						<p:datePicker locale="br" id="dataNascimento" monthNavigator="true" yearNavigator="true" value="#{setup.dataNascimento}"/>
+					</div>
+
+					<div class="p-field">
+						<label for="senha">Senha</label>
+						<p:password id="senha" toggleMask="true" redisplay="true" />
+					</div>
+				</div>
+			</p:dataTable>
+
+			<f:facet name="footer">
+				<p:commandButton icon="pi pi-times" value="Cancelar"
+					styleClass="ui-button-secondary" style="margin-left: .5em" />
+				<p:commandButton icon="pi pi-check" value="Salvar"
+					action="#{setupBean.save()}" />
+			</f:facet>
+		</p:card>
+	</h:form>
+</h:body>
+</html>
